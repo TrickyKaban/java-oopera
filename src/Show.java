@@ -20,18 +20,14 @@ public class Show {
     public void printActors() {
         System.out.println("Актёры спектакля \"" + title + "\":");
         for (Actor actor : listOfActors) {
-            System.out.println(actor.name + " " + actor.surname + " (" + actor.height + ")");
+            System.out.println(actor);
         }
     }
 
     public void addActor(Actor actor) {
-        for (Actor a : listOfActors) {
-            if (a.name.equals(actor.name) &&
-                    a.surname.equals(actor.surname) &&
-                    a.height == actor.height) {
-                System.out.println("Такой актёр уже есть в спектакле.");
-                return;
-            }
+        if (listOfActors.contains(actor)) {
+            System.out.println("Такой актёр уже есть в спектакле.");
+            return;
         }
         listOfActors.add(actor);
     }
