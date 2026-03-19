@@ -1,5 +1,5 @@
 public class Ballet extends MusicalShow {
-    Person choreographer;
+     private Person choreographer;
 
     public Person getChoreographer() {
         return choreographer;
