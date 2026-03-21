@@ -1,10 +1,11 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Show {
-    String title;
-    int duration;
-    Director director;
-    ArrayList<Actor> listOfActors;
+    private String title;
+    private int duration;
+    private Director director;
+    private ArrayList<Actor> listOfActors;
 
     public Show(String title, int duration, Director director) {
         this.title = title;
@@ -13,8 +14,36 @@ public class Show {
         this.listOfActors = new ArrayList<>();
     }
 
+    public String getTitle() {
+        return title;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public Director getDirector() {
+        return director;
+    }
+
+    public List<Actor> getListOfActors() {
+        return listOfActors;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
+    }
+
+    public void setDirector(Director director) {
+        this.director = director;
+    }
+
     public void printDirector() {
-        System.out.println("Режиссёр: " + director.name + " " + director.surname);
+        System.out.println("Режиссёр: " + director.getName() + " " + director.getSurname());
     }
 
     public void printActors() {
@@ -34,7 +63,7 @@ public class Show {
 
     public void replaceActor(Actor newActor, String surname) {
         for (int i = 0; i < listOfActors.size(); i++) {
-            if (listOfActors.get(i).surname.equals(surname)) {
+            if (listOfActors.get(i).getSurname().equals(surname)) {
                 listOfActors.set(i, newActor);
                 return;
             }

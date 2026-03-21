@@ -8,6 +8,14 @@ public class Director extends Person {
         this.numberOfShows = numberOfShows;
     }
 
+    public int getNumberOfShows() {
+        return numberOfShows;
+    }
+
+    public void setNumberOfShows(int numberOfShows) {
+        this.numberOfShows = numberOfShows;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -26,9 +34,9 @@ public class Director extends Person {
     @Override
     public String toString() {
         return "Director{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", gender=" + gender +
+                "name='" + getName() + '\'' +
+                ", surname='" + getSurname() + '\'' +
+                ", gender=" + getGender() +
                 ", numberOfShows=" + numberOfShows +
                 '}';
     }

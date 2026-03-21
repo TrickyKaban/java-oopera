@@ -11,10 +11,22 @@ public class Theatre {
         Person choreographer = new Person("Юрий", "Громов", Gender.MALE);
 
         Show show = new Show("Ревизор", 120, director1);
-        Opera opera = new Opera("Пиковая дама", 150, director2, musicAuthor,
-                "История о страсти, тайне трёх карт и трагической судьбе Германа.", 30);
-        Ballet ballet = new Ballet("Щелкунчик", 140, director1, musicAuthor,
-                "Сказочная история о Щелкунчике и путешествии в волшебный мир.", choreographer);
+        Opera opera = new Opera(
+                "Пиковая дама",
+                150,
+                director2,
+                musicAuthor,
+                "История о страсти, тайне трёх карт и трагической судьбе Германа.",
+                30
+        );
+        Ballet ballet = new Ballet(
+                "Щелкунчик",
+                140,
+                director1,
+                musicAuthor,
+                "Сказочная история о Щелкунчике и путешествии в волшебный мир.",
+                choreographer
+        );
 
         show.addActor(actor1);
         show.addActor(actor2);

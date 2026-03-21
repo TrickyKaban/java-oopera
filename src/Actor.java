@@ -1,10 +1,18 @@
 import java.util.Objects;
 
 public class Actor extends Person {
-    double height;
+    private double height;
 
     public Actor(String name, String surname, Gender gender, double height) {
         super(name, surname, gender);
+        this.height = height;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
         this.height = height;
     }
 
@@ -25,11 +33,9 @@ public class Actor extends Person {
 
     @Override
     public String toString() {
-        return "Actor{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", gender=" + gender +
-                ", height=" + height +
-                '}';
+        String genderText = (getGender() == Gender.MALE) ? "мужской" : "женский";
+        return getName() + " " + getSurname() +
+                ", пол: " + genderText +
+                ", рост: " + (int) height + " см";
     }
 }
